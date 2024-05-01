@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Setup Instructions:
 
-## Getting Started
+- Clone the project repository from the version 
+- control system (e.g., Git).
+- Navigate to the project directory in your terminal.
+- Run npm install or yarn install to install the - project dependencies.
+- .env.local for firebase credential
+- Start the development server using npm start or yarn start.
+- Access the application in your web browser at the specified URL (usually localhost:3000).
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Brief Overview of Architecture:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Authentication Page:
+- Use React components with Ant Design for the login form.
+- Implement form validation using Ant Design validation rules.
+- Mock responses for successful and unsuccessful logins.
+# Projects Overview Page:
+- Use React components to display a list of projects.
+- Fetch project data from a mock API using React Query.
+- Include options to view, edit, or delete projects.
+# Project Details Page:
+- Navigate to a project details page upon selecting a project.
+- Display detailed information about the project, including tasks, team members, and recent activities.
+- Implement functionalities to add new tasks and assign team members.
+# Task Management:
+- Implement CRUD (Create, Read, Update, Delete) operations for tasks.
+- Use Zustand to manage state, including task statuses (e.g., To Do, In Progress, Done).
+- Implement drag-and-drop feature for changing task statuses.
+- Task Filters and Search Functionality:
+- Provide options to filter tasks by status, due date, or assignee.
+- Include a search bar for quickly finding tasks based on keywords.
+# Interactive Dashboard:
+- Utilize Ant Design components for creating modals, dropdowns, and tooltips.
+- Ensure responsiveness of all components using Tailwind CSS for styling.

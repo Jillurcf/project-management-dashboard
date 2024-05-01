@@ -1,42 +1,42 @@
 [
-    {
-        "project name" : "Restaurant Management Project",
-        "project tasks" : "Landing page",
+    {   "id": 0,
+        "project_name" : "Restaurant Management Project",
+        "project_tasks" : "Landing page",
         "image": "https://i.ibb.co/8DZvxKm/restaurantlanding.jpg",
-        "team member": 5,
+        "team_member": 5,
         "deadline": "20 days",
-        "recent activities": "10% done"
+        "recent_activities": "10% done"
     },
-    {
-        "project name" : "Restaurant Management Project",
-        "project tasks" : "Landing page",
+    {   "id": 1,
+        "project_name" : "Restaurant Management Project",
+        "project_tasks" : "Landing page",
         "image": "https://i.ibb.co/8DZvxKm/restaurantlanding.jpg",
-        "team member": 5,
+        "team_member": 5,
         "deadline": "20 days",
-        "recent activities": "10% done"
+        "recent_activities": "10% done"
     },
-    {
-        "project name" : "Restaurant Management Project",
-        "project tasks" : "Landing page",
+    {   "id": 2,
+        "project_name" : "Restaurant Management Project",
+        "project_tasks" : "Landing page",
         "image": "https://i.ibb.co/8DZvxKm/restaurantlanding.jpg",
-        "team member": 5,
+        "team_member": 5,
         "deadline": "20 days",
-        "recent activities": "50% done"
+        "recent_activities": "50% done"
     },
-    {
-        "project name" : "food Management Project",
-        "project tasks" : "top product page",
+    {   "id": 3,
+        "project_name" : "food Management Project",
+        "project_tasks" : "top product page",
         "image": "https://i.ibb.co/8DZvxKm/restaurantlanding.jpg",
-        "team member": 5,
+        "team_member": 5,
         "deadline": "20 days",
-        "recent activities": "20% done"
+        "recent_activities": "20% done"
     },
-    {
-        "project name" : "Restaurant Management Project",
-        "project tasks" : "Landing page",
+    {   "id": 4,
+        "project_name" : "Restaurant Management Project",
+        "project_tasks" : "Landing page",
         "image": "https://i.ibb.co/8DZvxKm/restaurantlanding.jpg",
-        "team member": 5,
+        "team_member": 5,
         "deadline": "20 days",
-        "recent activities": "30% done"
+        "recent_activities": "30% done"
     }
 ]

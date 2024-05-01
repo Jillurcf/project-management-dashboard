@@ -26,8 +26,8 @@ const menuItems = [
         icon: <MdDashboard></MdDashboard>,
       },
       {
-        title: "Dashboard",
-        path: "/dashboard",
+        title: "Add Project",
+        path: "/dashboard/addProject",
         icon: "",
       },
     ],
@@ -92,7 +92,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className="px-4 bg-[#182237] h-screen py-12">
+    <div className="px-4 bg-[#182237] h-auto py-12">
       <div className="flex gap-2 items-center mb-4">
       <div
             tabIndex={0}
