@@ -4,11 +4,11 @@ import Navbar from '../ui/dashboard/navbar/navbar';
 
 const Layout = ({children}) => {
     return (
-       <div className='flex mt-12'>
-        <div className='w-[300px]'>
+       <div className='flex h-screen'>
+        <div className='w-[20vh]'>
             <Sidebar></Sidebar>
         </div>
-        <div>
+        <div className='w-[80vw]'>
             <Navbar></Navbar>
             {children}
         </div>
