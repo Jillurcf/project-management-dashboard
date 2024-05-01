@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AuthContext } from "../provider/page";
+import { AuthContext } from "../../provider/page";
 
 
 

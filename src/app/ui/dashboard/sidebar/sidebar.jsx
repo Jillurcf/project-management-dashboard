@@ -17,13 +17,13 @@ const menuItems = [
       },
       {
         title: "Users",
-        path: "dashboard/users",
-        icon: "",
+        path: "/dashboard/users",
+        icon: <MdDashboard></MdDashboard>,
       },
       {
         title: "Projects",
-        path: "dashboard/projects",
-        icon: "",
+        path: "/dashboard/projects",
+        icon: <MdDashboard></MdDashboard>,
       },
       {
         title: "Dashboard",
