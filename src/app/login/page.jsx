@@ -1,12 +1,33 @@
 "use client"
 // components/LoginForm.js
 import { Form, Input, Button } from 'antd';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { useRouter } from 'next/navigation';
+import app from '../firebase/config';
+
 
 const LoginPage = () => {
-  const onFinish = (values) => {
-    console.log('Received values:', values);
-    // Handle login logic here
+  const router = useRouter()
+  const onFinish = (value) => {
+    const { email, password } = value; 
+    try {
+      const auth = getAuth(app);
+      const userCredential =  signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+
+      );
+      router.push("/dashboard")
+      console.log("User Logged In:", userCredential.user);
+     
+    } catch (error) {
+      console.error("Error creating user:", error);
+      // setError(error.message); // Set error message state
+    }
+    
   };
+
 
   return (
   <div className='max-w-screen-md mx-auto h-screen justify-center items-center flex'>
@@ -35,7 +56,7 @@ const LoginPage = () => {
       >
         <Input.Password />
       </Form.Item>
-
+      <p>Do not have an account please <span className="underline text-blue-800"><a href="/signup">Register</a></span></p>
       <Form.Item>
         <Button type="primary" htmlType="submit">
           Log in

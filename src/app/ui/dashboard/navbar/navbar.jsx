@@ -6,7 +6,7 @@ import { FaSearch } from "react-icons/fa";
 const Navbar = () => {
 
   return (
-    <div className="">
+    <div className="max-w-screen-xl mx-auto py-12">
       
      <div className="flex justify-between">
      <div className="join">

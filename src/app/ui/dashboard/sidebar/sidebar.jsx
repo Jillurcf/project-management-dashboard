@@ -1,6 +1,10 @@
+"use client"
 import { MdDashboard } from "react-icons/md";
 import Image from "next/image";
 import MenuLink from "./menuLink/menuLink";
+import { getAuth, signOut  } from "firebase/auth";
+import app from "@/app/firebase/config";
+import { useRouter } from "next/navigation";
 
 const menuItems = [
   {
@@ -69,9 +73,26 @@ const menuItems = [
     ],
   },
 ];
+
+
+
 const Sidebar = () => {
+  const router = useRouter();
+  const handleLogout = async () => {
+    try {
+      const auth = getAuth(app);
+      await signOut(auth);
+      router.push('/login'); // Redirect to the login page after logout
+    } catch (error) {
+      console.error('Error logging out:', error);
+      // Handle error
+    }
+  };
+
+
+
   return (
-    <div className="px-4 bg-[#182237] h-screen">
+    <div className="px-4 bg-[#182237] h-screen py-12">
       <div className="flex gap-2 items-center mb-4">
       <div
             tabIndex={0}
@@ -102,7 +123,7 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
-      <button  className=" btn btn-primary mt-4">Logout</button>
+      <button onClick={handleLogout} className=" btn btn-primary">Logout</button>
     </div>
   );
 };
