@@ -102,7 +102,7 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
-      <button className=" ">Logout</button>
+      <button  className=" btn btn-primary mt-4">Logout</button>
     </div>
   );
 };
