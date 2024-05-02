@@ -1,5 +1,10 @@
 "use client"
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdAssignmentAdd, MdAnalytics } from "react-icons/md";
+import { FaUsers } from "react-icons/fa6";
+import { GoProjectSymlink } from "react-icons/go";
+import { GrOverview, GrDocumentPerformance } from "react-icons/gr";
+import { IoIosSettings, IoIosHelpCircle, IoMdLogOut } from "react-icons/io";
+import { SiInfracost } from "react-icons/si";
 import Image from "next/image";
 import MenuLink from "./menuLink/menuLink";
 import { getAuth, signOut  } from "firebase/auth";
@@ -18,17 +23,17 @@ const menuItems = [
       {
         title: "Users",
         path: "/dashboard/users",
-        icon: <MdDashboard></MdDashboard>,
+        icon: <FaUsers></FaUsers>,
       },
       {
         title: "Projects",
         path: "/dashboard/projects",
-        icon: <MdDashboard></MdDashboard>,
+        icon: <GoProjectSymlink></GoProjectSymlink>,
       },
       {
         title: "Add Project",
         path: "/dashboard/addProject",
-        icon: "",
+        icon: <MdAssignmentAdd></MdAssignmentAdd>,
       },
     ],
   },
@@ -36,24 +41,24 @@ const menuItems = [
     title: "Analytics",
     list: [
       {
-        title: "Dashboard",
+        title: "Project Overview",
         path: "/dashboard",
-        icon: "",
+        icon: <GrOverview ></GrOverview>,
       },
       {
-        title: "Dashboard",
+        title: "Task Analytics",
         path: "/dashboard",
-        icon: "",
+        icon: <MdAnalytics></MdAnalytics>,
       },
       {
-        title: "Dashboard",
+        title: "Team Performance",
         path: "/dashboard",
-        icon: "",
+        icon: <GrDocumentPerformance></GrDocumentPerformance>,
       },
       {
-        title: "Dashboard",
+        title: "Budget and Cost analytics",
         path: "/dashboard",
-        icon: "",
+        icon: <SiInfracost></SiInfracost>,
       },
     ],
   },
@@ -63,12 +68,12 @@ const menuItems = [
       {
         title: "Settings",
         path: "/dashboard/settings",
-        icon: "",
+        icon: <IoIosSettings></IoIosSettings>,
       },
       {
         title: "Help",
         path: "/dashboard/help",
-        icon: "",
+        icon: <IoIosHelpCircle></IoIosHelpCircle>,
       },
     ],
   },
@@ -94,20 +99,23 @@ const Sidebar = () => {
   return (
     <div className="px-4 bg-[#182237] h-auto py-12">
       <div className="flex gap-2 items-center mb-4">
-      <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
-              <Image
-                height={"50"}
-                width={"50"}
-                alt=""
-                src="/profile-03-12-23.png"
-              />
-            </div>
+      <div className="dropdown dropdown-end">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn btn-ghost btn-circle avatar"
+        >
+          <div className="w-10 rounded-full">
+            <Image
+              height={"50"}
+              width={"50"}
+              alt=""
+              src="/profile-03-12-23.png"
+            />
           </div>
+        </div>
+        
+      </div>
         <div className="flex flex-col">
           <span>Jillur Rahman</span>
           <span className="">Admin</span>
@@ -123,7 +131,11 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
-      <button onClick={handleLogout} className=" btn btn-primary">Logout</button>
+      <div className="flex gap-2">
+      <IoMdLogOut className=" text-xl"></IoMdLogOut>
+      <button onClick={handleLogout} className="font-bold text-gray-400"> Logout</button>
+      </div>
+     
     </div>
   );
 };

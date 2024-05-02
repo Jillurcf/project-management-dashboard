@@ -4,15 +4,15 @@ import { Reorder } from "framer-motion";
 const Dndhome = () => {
   const [items, setItems] = useState([ "To do", "In Progress", "Done"]);
   return (
-    <div className="">
+    <div className="px-36">
         <Reorder.Group values={items} onReorder={setItems }>
         {items.map((item, index) => (
             <Reorder.Item values="item" key={item}>
-        <>
+        <div className="border my-4 rounded-xl px-4">
           <div className="m-8">
-            <div>
-              <div>
-                <h1>{item} </h1>
+            <div className="">
+              <div className="">
+                <h1 className="font-bold text-gray-400">{item} </h1>
               </div>
             </div>
           </div>
@@ -24,7 +24,7 @@ const Dndhome = () => {
               dolorum placeat mollitia? Suscipit?
             </p>
           </div>
-        </>
+        </div>
         </Reorder.Item>
       ))}
         </Reorder.Group>
