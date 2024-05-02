@@ -30,7 +30,7 @@ const LoginPage = () => {
 
 
   return (
-  <div className='max-w-screen-md mx-auto h-screen justify-center items-center flex'>
+  <div className='px-4 max-w-screen-md mx-auto h-screen justify-center items-center flex'>
    
       <Form className='border p-12 rounded-xl text-white'
       name="loginForm"

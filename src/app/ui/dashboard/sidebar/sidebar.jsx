@@ -3,7 +3,7 @@ import { MdDashboard, MdAssignmentAdd, MdAnalytics } from "react-icons/md";
 import { FaUsers } from "react-icons/fa6";
 import { GoProjectSymlink } from "react-icons/go";
 import { GrOverview, GrDocumentPerformance } from "react-icons/gr";
-import { IoIosSettings, IoIosHelpCircle, IoMdLogOut } from "react-icons/io";
+import { IoIosSettings, IoIosHelpCircle, IoMdLogOut, IoIosNotifications } from "react-icons/io";
 import { SiInfracost } from "react-icons/si";
 import Image from "next/image";
 import MenuLink from "./menuLink/menuLink";
@@ -116,10 +116,16 @@ const Sidebar = () => {
         </div>
         
       </div>
-        <div className="flex flex-col">
+       <div className="lg:flex-none lg:gap-0 lg:hidden flex gap-16">
+       <div className="flex flex-col">
           <span>Jillur Rahman</span>
           <span className="">Admin</span>
         </div>
+        <IoIosNotifications></IoIosNotifications>
+        <div>
+
+        </div>
+       </div>
       </div>
       <ul>
         {menuItems.map((cat) => (

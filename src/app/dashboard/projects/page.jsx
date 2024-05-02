@@ -15,7 +15,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="grid gap-2 lg:grid-cols-5 py-12">
+    <div className="lg:pl-0 grid gap-4 lg:gap-2 justify-items-center grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8 py-12">
       {projects.map((project) => (
         <div key={project.id} className="card w-60 bg-base-100 relative">
           <div className="card-actions justify-center">
